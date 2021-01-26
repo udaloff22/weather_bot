@@ -5,7 +5,7 @@ running=True
 while running:
     place = input('which town, brah? ')
     if place != 'exit':# условие, нужен ли выход или нет
-
+#asdf
         try:
             observation = mgr.weather_at_place(place)
             w = observation.weather
