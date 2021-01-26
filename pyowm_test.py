@@ -2,16 +2,22 @@ from pyowm import OWM
 
 
 with open('token.txt') as f:
-    PYOWM_TOKEN = f.read()
+    PYOWM_TOKEN = f.read()[:-1]
     f.close()
 
 
-owm = OWM7\
+print(len(PYOWM_TOKEN))
 
 
 
-def show_weather(place):
+def show_weather():
 
+
+    owm = OWM(PYOWM_TOKEN)
+
+    mgr = owm.weather_manager()
+
+    observation = mgr.weather_at_place('London,GB')
 
     w = observation.weather
 
@@ -28,4 +34,4 @@ def show_weather(place):
 
     return temper, temper_max, temper_min, cloud_status, detailed_status
 
-print(show_weather(input()))
+print(show_weather())
