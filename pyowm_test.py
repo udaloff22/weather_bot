@@ -1,7 +1,7 @@
 from pyowm import OWM
 
 
-with open('token.txt') as f:
+with open('pyowm_token.txt') as f:
     PYOWM_TOKEN = f.read()[:-1]
     f.close()
 
@@ -20,7 +20,7 @@ def show_weather(place):
 
     except:
         return 'Wrong Hood, brah..'
-        
+
     w = observation.weather
 
 
