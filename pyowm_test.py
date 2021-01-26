@@ -6,9 +6,6 @@ with open('pyowm_token.txt') as f:
     f.close()
 
 
-
-
-
 def show_weather(place):
 
 
