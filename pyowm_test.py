@@ -6,23 +6,22 @@ with open('token.txt') as f:
     f.close()
 
 
-print(len(PYOWM_TOKEN))
 
 
 
-def show_weather():
+def show_weather(place):
 
 
     owm = OWM(PYOWM_TOKEN)
-
     mgr = owm.weather_manager()
 
-    observation = mgr.weather_at_place('London,GB')
+    try:
+        observation = mgr.weather_at_place(place)
 
+    except:
+        return 'Wrong Hood, brah..'
+        
     w = observation.weather
-
-
-
 
 
     temper  = w.temperature('celsius')['temp']
@@ -34,4 +33,4 @@ def show_weather():
 
     return temper, temper_max, temper_min, cloud_status, detailed_status
 
-print(show_weather())
+print(show_weather(input()))
