@@ -44,18 +44,12 @@ def show_weather(place):
     return result
 
 
-
-
-
-
-
-
 bot = telebot.TeleBot(tgbot_token)
 
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, message.text)
+
     print(message.text)
     content = show_weather(message.text)
     print(content)
