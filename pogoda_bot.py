@@ -33,7 +33,15 @@ def show_weather(place):
     cloud_status = w.status
     detailed_status = w.detailed_status
 
-    return temper, temper_max, temper_min, cloud_status, detailed_status
+    result = 'Temperature: {} \nMax Temperature: {} \nMin Temperature: {} \nCloud Status: {} \nDetailed Status: {}'.format(
+        temper,
+        temper_max,
+        temper_min,
+        cloud_status,
+        detailed_status
+    )
+
+    return result
 
 
 
