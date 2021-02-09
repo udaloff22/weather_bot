@@ -1,1 +1,0 @@
-['temper in rio = 8.73', 'temper_max in rio = 11.11', 'temper_min in rio = 3.89', 'status in rio = Clouds', 'detailed_status in rio = overcast clouds']
