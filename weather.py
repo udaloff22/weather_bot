@@ -1,10 +1,7 @@
 from pyowm import OWM
+from tokens import PYOWM_TOKEN
 
 def show_weather(place):
-
-    with open('pyowm_token.txt') as s:
-        PYOWM_TOKEN = s.read()[:-1]
-        s.close()
 
     owm = OWM(PYOWM_TOKEN)
     mgr = owm.weather_manager()

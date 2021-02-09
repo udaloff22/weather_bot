@@ -1,17 +1,10 @@
 import telebot
-
+from tokens import TGBOT_TOKEN
 
 from weather import show_weather
 
 
-with open('tgbot_token.txt') as f:
-    tgbot_token = f.read()[:-1]
-    f.close()
-
-
-
-
-bot = telebot.TeleBot(tgbot_token)
+bot = telebot.TeleBot(TGBOT_TOKEN)
 
 
 @bot.message_handler(func=lambda message: True)
